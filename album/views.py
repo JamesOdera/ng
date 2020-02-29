@@ -4,7 +4,7 @@ import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('IMAGE GALLERY')
+    return render(request, 'welcome.html')
 
 def album_of_day(request):
     date = dt.date.today()
