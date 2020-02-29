@@ -50,3 +50,8 @@ class Article(models.Model):
     def days_album(cls,date):
         album = cls.objects.filter(pub_date__date = date)
         return album
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        album = cls.objects.filter(title__icontains=search_term)
+        return album
