@@ -50,3 +50,10 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'all-album/search.html',{"message":message})
 
+def article(request,article_id):
+    try:
+        article = Article.objects.get(id = article_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"all-album/article.html", {"article":article})
+

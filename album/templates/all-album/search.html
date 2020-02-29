@@ -18,6 +18,21 @@
       <div class="col-sm-6 col-md-3">
           <h1>{{article.title}}</h1>
       </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <img src="{{article.article_image.url}}" class="img-responsive" alt="Image">
+      </div>
+      <div class="row">
+        <h1 class="text-center">{{article.location}}</h1>
+      </div>
+
+      <div class="row">
+        <h1 class="text-center">{{article.category}}</h1>
+      </div>
+   
+      <div class="row">
+        <p>{{article.post}}</p>
+      </div>
     {% endfor %}
   {% endif %}
   </div>
