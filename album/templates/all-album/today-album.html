@@ -2,4 +2,26 @@
 
 {% block content %}
 {{block.super}}
+
+<div class="container">
+
+   
+    {% for album_item in album %}
+  
+    <div class="row">
+      
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h2 class="text-center"> {{ album_item.title }} </h2>
+      </div>
+  
+    </div>
+  
+    {% empty %}
+    <div class="row">
+      <h2 class="text-center"> No Images Items</h2>
+    </div>
+    {% endfor %}
+  
+  </div>
+
 {% endblock %}
