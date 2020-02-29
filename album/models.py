@@ -39,6 +39,7 @@ class Article(models.Model):
     category = models.ForeignKey(Category, null=True)
     location = models.ForeignKey(Location, null=True)
     pub_date = models.DateTimeField(auto_now_add=True)
+    article_image = models.ImageField(upload_to = 'articles/')
 
     @classmethod
     def todays_album(cls):
